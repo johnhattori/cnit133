@@ -38,17 +38,18 @@
         <div class="main-container">
             <div class="main wrapper clearfix">
             
-
-            num1: <input type="text" id="num1" class="num"><br>
-            num2: <input type="text" id="num2" class="num"><br>
-            num3: <input type="text" id="num3" class="num"><br>
-            <button id="sum" onClick="sum();">Sum</button>
-            <button id="product">Product</button>
-            <button id="average">Average</button>
-            <button id="least">smallest</button>
-            <button id="most">largest</button><br>
-            result: <input type="text" id="result"><br>
-           </div> <!-- #main -->
+            <form>
+                num1: <input type="number" id="num1" class="num"><br>
+                num2: <input type="number" id="num2" class="num"><br>
+                num3: <input type="number" id="num3" class="num"><br>
+                <button id="sum" type="button">Sum</button>
+                <button id="product">Product</button>
+                <button id="average">Average</button>
+                <button id="least">smallest</button>
+                <button id="most">largest</button><br>
+                result: <input type="text" id="result"><br>
+            </form>
+            </div> <!-- #main -->
         </div> <!-- #main-container -->
 
         <div class="footer-container">
@@ -57,11 +58,11 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-        <script>
+        <!-- <script>
             function sum()
             {       
                 var fn, sn, tn result; 
@@ -72,13 +73,13 @@
                 <!--document.getElementById("result").value += result;-->
                 document.getElementById('result').innerHTML += "<input type='file' value='' /><br />";
             }
-        </script>
+        </script> -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='http://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
