@@ -171,12 +171,43 @@ h4 {
     text-align: center;
 }
 
+section {
+    float:right;
+    width:64%;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 100%;
 
+}
+p {
+    margin: 10px 40px 5px 0;
+}
 
+input {
+    margin-top: 10px;
+    text-align: left;
+}
 
+form {
+    
+}
 
+button {
+    margin: 8px 1px;
+    font-family: 'Gudea', sans-serif;
+}
 
+.num {
+    margin: 5px 12px;
+}
 
+.results {
+    margin: 5px 5px;
+}
+
+.button {
+    margin: 20px 20px 10px 0px;
+}    
 
 
 
@@ -254,12 +285,12 @@ h4 {
 
     .main article {
         float: left;
-        width: 57%;
+        width: 37%;
     }
 
     .main aside {
         float: right;
-        width: 28%;
+        width: 48%;
     }
 }
 

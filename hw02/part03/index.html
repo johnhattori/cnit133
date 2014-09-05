@@ -22,14 +22,14 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">Homework 02</h1>
+                <h1 class="title">Homework 03</h1>
                 <nav>
                     <ul>
                         <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/part01/index.html">Part 1</a></li>
-                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/part02/index.html">Part 2</a></li>
+                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/part02/index.html#">Part 2</a></li>
                         <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/index.html#">Home</a></li>
-                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/part04/index.html">Part 4</a></li>
-                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/extra/index.html">Extra</a></li>
+                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/part04/index.html#">Part 4</a></li>
+                        <li><a href="http://hills.ccsf.edu/~jhattori/cnit133/hw02/extra/index.html#">Extra</a></li>
                     </ul>
                 </nav>
             </header>
@@ -37,19 +37,22 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-
-                <article>
-                    <header>
-                        <h3>Part 1 - document.writeln and document.write statements</h3>
-                        <h3>Part 2 - Input three integers</h3>
-                        <h3>Part 3 - JQuery</h3>
-                        <h3>Part 4 - Calculation Table</h3>
-                </article>
-
-                <aside>
-                    <h3>Extra Credit - Exchange Rates</h3>
-                </aside>
-
+            <article> 
+            <form>
+                num1: <input type="number" id="num1" class="num" onfocus="this.value='';"><br>
+                num2: <input type="number" id="num2" class="num" onfocus="this.value='';"><br>
+                num3: <input type="number" id="num3" class="num" onfocus="this.value='';"><br>
+                num4: <input type="number" id="num4" class="num" onfocus="this.value='';"><br>
+                num5: <input type="number" id="num5" class="num" onfocus="this.value='';"><br>
+                results: <textarea type="text" id="result" class="results"></textarea><br>
+                <button id="submit" type="button" class="button">Submit</button>
+                <button id="reset" type="button" class="button">Reset</button>
+                <button id="fade" type="button" class="button">Fade results</button>
+            </form>
+            </article>
+            <aside>
+                <p class="directions">Input five numbers. Submit button returns the number of negative and positive, as well as number of times you entered zero. As an added bonus, you can fade the results.</p>
+            </aside>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
@@ -63,8 +66,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+       
+       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
