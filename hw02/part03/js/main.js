@@ -16,13 +16,14 @@ $(document).ready(function() {
             }
 
             });        
-        $('#result').append("You entered " + pos +  " positive numbers. " 
+        $('#result').text("You entered " + pos +  " positive numbers. " 
                             + neg  + " negative numbers. "
                             + "and " + zero +  " zeros");    
     });
 
     $('#reset').click(function(){
         $('#numForm').trigger('reset');
+        $('#result').empty();
    });
     
     $('#fade').click(function(){
