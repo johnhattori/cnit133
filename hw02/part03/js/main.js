@@ -16,6 +16,7 @@ $(document).ready(function() {
             }
 
             });        
+        $('#result').empty().removeClass("faded"); 
         $('#result').text("You entered " + pos +  " positive numbers. " 
                             + neg  + " negative numbers. "
                             + "and " + zero +  " zeros");    
@@ -23,11 +24,11 @@ $(document).ready(function() {
 
     $('#reset').click(function(){
         $('#numForm').trigger('reset');
-        $('#result').empty();
+        $('#result').empty().removeClass("faded"); 
    });
     
     $('#fade').click(function(){
-        $('#result').fadeTo("slow",0.7);
+        $('#result').addClass("faded");
     });
 
 });
