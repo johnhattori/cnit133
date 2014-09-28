@@ -2,7 +2,12 @@ h3 {
     text-align:center;
     margin:12px;
 }
+
 .desc {
     text-align:center;
     margin:12px;
+}
+
+#message {
+    margin-left: 24px;
 }
