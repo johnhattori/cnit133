@@ -23,9 +23,18 @@ $(document).ready(function(){
             }
     });
     if (!is_error) {
-        sum = 200 + add(quantity);
+        result = add(quantity);
+        sum = 200 + result[0];
+        amount = result[1];
         $("#error").empty().hide();
-        $("#total").text("$ " + sum.toFixed(2));
+        $("#total").val("$ " + sum.toFixed(2));
+        $("#amount").val("$ " + amount.toFixed(2));
+        $('.quantity').each(function(i) {
+            $(this).val("$ " + result[2][i]);
+        });
+        $('.total').each(function(i) {
+            $(this).val(quantity[i]);
+        });
     }
 
     });
@@ -41,22 +50,33 @@ $(document).ready(function(){
 
 function add(quantity) {
     var sum = 0;
+    var totals = [];
     for (var i = 0; i < quantity.length; i++) {
         if (i === 0) {
+            totals.push(quantity[i] * 239.99);
             sum += (quantity[i] * 239.99) * .09;
         }
         if (i === 1) {
+            totals.push(quantity[i] * 129.75);
             sum += (quantity[i] * 129.75) * .09;
         }
         if (i === 2) {
+            totals.push(quantity[i] * 99.95);
             sum += (quantity[i] * 99.95) * .09;
         }
         if (i === 3) {
+            totals.push(quantity[i] * 350.89);
             sum += (quantity[i] * 350.89) * .09;
 
             }    
     
     }
-        return sum;
+        var amount = 0;
+        for(var i=0; i<totals.length; i++){
+            amount += totals[i]; 
+        }
+
+        return [sum, amount, totals];
+        
 
 }    
