@@ -13,12 +13,12 @@ $(document).ready(function(){
         limit  = parseFloat($('#limit').val()); 
 
         new_balance = balance + charge - applied;
-        result += 'the new balance is $' + new_balance;
+        result += 'Your new balance is $' + new_balance;
         new_limit = limit - new_balance;
         if(new_limit < new_balance) {
-            result += "\n Credit limit exceeded by $" + (new_balance - limit);
+            result += "\nCredit limit exceeded by $" + (new_balance - limit);
         }else {
-            result += "\n Credit available $" + (limit - new_balance);    
+            result += "\nCredit available $" + (limit - new_balance);    
         }
 
         $('#sum').val(result)
