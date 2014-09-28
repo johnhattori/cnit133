@@ -7,6 +7,7 @@ $(document).ready(function(){
     
     // Calculate grade 
     $("#score").click(function(){
+        $('#warning').hide();
         numbers = [];
         is_error = false;
         $(".score").each(function() {
@@ -16,7 +17,6 @@ $(document).ready(function(){
                 $("#error").text("Number out of range").show();
                 $("#average").empty();
                 $("#grade").empty();
-                $("#warning").empty().hide();
                 is_error = true;
                 return; //abort
             } else {
@@ -29,10 +29,10 @@ $(document).ready(function(){
         sum = add(numbers);
         grade = getGrade(sum);
         $("#error").empty().hide();
-        $("#average").text("Average score : " + sum);
+        $("#average").text("Average score : " + Math.round(sum));
         $("#grade").text("Grade : " + grade);
         if(sum <= 59) {
-            $("#warning").text("You need to retake this course.");
+            $("#warning").show();
         }
     }
 
@@ -42,7 +42,7 @@ $(document).ready(function(){
                 $(this).val("");
             });
             $("#error").empty().hide();
-            $("#warning").empty().hide();
+            $("#warning").hide();
             $("#average").empty();
             $("#grade").empty();
     });

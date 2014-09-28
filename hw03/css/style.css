@@ -1,12 +1,15 @@
-#panel,#flip
-{
+#panel, #flip {
     padding:5px;
     text-align:center;
     background-color:#e7e7e7;
     border:solid 1px #e8e8e8;
 }
-#panel
-{
+
+#panel { 
     padding:24px;
+    display:none;
+}
+
+#warning {
     display:none;
 }
