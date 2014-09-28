@@ -32,21 +32,21 @@
             </div>    
         </div>
         <form class="form-horizontal">
-            <label class="col-sm-4 control-label">Enter temperature in Celsius:</label>
+            <label class="col-sm-4 control-label">Celsius to Fahrenheit</label>
             <div class="col-lg-6">
                 <div class="input-group">
-                  <input type="text" class="form-control" id="digits">
+                  <input type="text" class="form-control" id="c2f_input" placeholder="Enter a value in Celsius to convert to Fahrenheit">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Convert</button>
+                    <button class="btn btn-default" id="c2f" type="button">Fahrenheit</button>
                   </span>
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
-            <label class="col-sm-4 control-label">Enter temperature in Fahreheit:</label>
+            <label class="col-sm-4 control-label">Fahreheit to Celsius</label>
             <div class="col-lg-6">
                 <div class="input-group">
-                  <input type="text" class="form-control" id="digits">
+                  <input type="text" class="form-control" id="f2c_input" placeholder="Enter a value in Fahrenheit">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Convert</button>
+                    <button class="btn btn-default" id="f2c" type="button">Celsius</button>
                   </span>
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
@@ -54,6 +54,7 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src = "js/bootstrap.js"></script>
+        <script src = "js/script.js"></script>
     
     </body>
 </html>
