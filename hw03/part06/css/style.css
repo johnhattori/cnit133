@@ -1,4 +1,4 @@
-.button, #prob, #input, #ans {
+.button, #prob, #input, #ans, p {
     text-align:center;
     margin:24px,2px;
 }
