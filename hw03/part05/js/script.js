@@ -20,16 +20,16 @@ $(document).ready(function() {
     });
 });
 
-function c2f(value) {
-    
-    $('#c2f_input').val('');
-    c = Math.round(5/9 * (value -32));
-    $('#c2f_input').val(value + " degrees F is " + c + " degrees C");
-}
-
 function f2c(value) {
     
     $('#f2c_input').val('');
+    c = Math.round(5/9 * (value -32));
+    $('#f2c_input').val(value + " degrees F is " + c + " degrees C");
+}
+
+function c2f(value) {
+    
+    $('#c2f_input').val('');
     f = Math.round((9/5 * value) + 32);
-    $('#f2c_input').val(value + " degrees C is " + f + " degrees F");
+    $('#c2f_input').val(value + " degrees C is " + f + " degrees F");
 }

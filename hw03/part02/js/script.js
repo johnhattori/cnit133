@@ -30,7 +30,7 @@ $(document).ready(function(){
         $("#total").val("$ " + sum.toFixed(2));
         $("#amount").val("$ " + amount.toFixed(2));
         $('.quantity').each(function(i) {
-            $(this).val("$ " + result[2][i]);
+            $(this).val("$ " + result[2][i].toFixed(2));
         });
         $('.total').each(function(i) {
             $(this).val(quantity[i]);
