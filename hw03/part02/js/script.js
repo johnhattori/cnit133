@@ -5,7 +5,7 @@ $(document).ready(function(){
         $('#user').tooltip();
     });
     // Get quantity of items sold and append to list
-    $("#submit").click(function(){
+    $("#submit").click(function(event){
         quantity = [];
         is_error = false;
         $(".score").each(function() {

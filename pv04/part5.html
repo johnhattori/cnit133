@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<title>Piyoros Vephula CNIT133 Homework Page</title>
+	<meta name="generator" content="BBEdit 10.1" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$(".showhide").click(function(){
+		$(".tbcontent .inst").slideToggle("slow");
+	});
+});
+
+$(document).ready(function(){
+	$('#btn1').click(function(){
+		if($.isNumeric($("#n").val())){
+    		//console.log("is num");
+    		listIt();
+    	}
+    	else{
+    		$('#errmsg').html("Please input in number only.")
+    		//console.log("is not num");
+    	}
+	});
+});
+
+function validInput(numinput){
+	if (isNaN(numinput) || numinput < 0){
+		return true;
+	}
+}
+
+function loopli(){
+	var a ="";
+	for(i=1;i<=3;i++)
+		a = a + "<li>List item" + i + "</li>";
+	return a;
+}
+
+function ls(a){
+	switch(a){
+		case 1: l = "<h3>Unordered List</h3><ul type='square'>" + loopli() + "</ul>";
+		break;
+		case 2: l = "<h3>Ordered Number List</h3><ol>" + loopli() + "</ol>";
+		break;
+		case 3: l = "<h3>Ordered Letter List</h3><ol type='A'>" + loopli() + "</ol>";
+		break;
+		default: l = "The input number has to be 1,2 or 3 only." 
+	}
+	return l;
+}
+
+function listIt(){
+	var a;
+	a = parseInt(document.getElementById("n").value);
+	document.getElementById("list").innerHTML = ls(a);
+}
+</script>
+</head>
+<body>
+<div id="wrapper" class="hel">
+	<div id="nav">
+		<p><a href="part1.html">part1</a> | <a href="part2.html">part2</a> | <a href="part3.html">part3</a> | <a href="part4.html">part4</a> | <a href="part5.html">part5</a> | <a href="part6.html">part6</a> | <a href="excre.html">extra credit</a></p>
+	</div>
+	<div id="hwdetl">
+		<table>
+			<tr>
+				<td><a href="../hw04.html"><p class="hwhead">Homework 4 : <br>Looping Statements</p></a></td><td></td>
+			</tr>
+			<tr class="row">
+				<td class="txttop col1">
+					<span class="part">PART</span><br><span class="pnum">05</span>
+				</td>
+				<td class="txttop col2 detl godown">
+					<p class="goup">Create a webpage that contains a script that uses a form text box for one of three different list formats. Use jQuery to show/hide instructions and validate input data. Use the following to determine which format is desired. Your script should use a switch statement to help determine this.
+					<br><br>1 - unordered list (ul type='square')
+					<br>2 - ordered number list (ol)
+					<br>3 - ordered letter list (ol type='A')
+					<br><br>After determining which list format has been chosen, write an appropriate header line and then use a for statement to write 3 lines in the chosen list format. Finally if the inputted value is NOT 1, 2, or 3 then display an error message using jQuery.</p>
+				</td>
+			</tr>
+		</table>
+		<div id="result">
+		<br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td><span class="showhide">Click to show/hide instructions</span></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="inst">
+						1 - unordered list (ul type='square')<br>
+						2 - ordered number list (ol)<br>
+						3 - ordered letter list (ol type='A')<br>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<form name="prt5">
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td class="txtcenter"><input type="text" id="n" class="txtcenter" size="10"></td>
+				</tr>
+				<tr>
+					<td class="txtcenter"><input type="button" id ="btn1" value="Submit"></td>
+				</tr>
+				<tr>
+					<td><div id="list"</div></td>
+				</tr>			
+			</table>
+			</form>
+			<div id="errmsg" class="txtcenter tbcontent hel"></div>
+		<br>
+		</div>
+	</div>
+	<div id="footer">
+		<p><a href="http://validator.w3.org/check?uri=http://hills.ccsf.edu/~pvephula/hw04/part5.html"><img src="../images/html5.png" height="25" alt="HTML5"></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" height="25" alt="Valid CSS!"></a></p>
+	</div>
+</div>
+</body>
+</html>

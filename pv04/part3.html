@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<title>Piyoros Vephula CNIT133 Homework Page</title>
+	<meta name="generator" content="BBEdit 10.1" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+function amount(p,r){
+	var a = [];
+	for(n=1;n<=10;n++){
+		a[n] = (p*Math.pow(1+r,n)).toFixed(2);
+		document.write("<tr class='altbg'><td>"+n+"</td><td>"+a[n]+"</td><td>"+r+"</td></tr>");
+	}
+}
+
+$(document).ready(function(){
+	$("tr.altbg:even").css("background-color", "#CFC");
+  	$("tr.altbg:odd").css("background-color", "#FFF");
+
+});
+</script>
+</head>
+<body>
+<div id="wrapper" class="hel">
+	<div id="nav">
+		<p><a href="part1.html">part1</a> | <a href="part2.html">part2</a> | <a href="part3.html">part3</a> | <a href="part4.html">part4</a> | <a href="part5.html">part5</a> | <a href="part6.html">part6</a> | <a href="excre.html">extra credit</a></p>
+	</div>
+	<div id="hwdetl">
+		<table>
+			<tr>
+				<td><a href="../hw04.html"><p class="hwhead">Homework 4 : <br>Looping Statements</p></a></td><td></td>
+			</tr>
+			<tr class="row">
+				<td class="txttop col1">
+					<span class="part">PART</span><br><span class="pnum">03</span>
+				</td>
+				<td class="txttop col2 detl godown">
+					<td class="txttop col2 detl godown">
+					<p class="goup">Create a webpage that contains a script that will calculate compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10. The formula to use is :
+					<br><br>P is the principal (the initial amount you borrow or deposit)
+					<br>r is the annual rate of interest (percentage)
+					<br>n is the number of years the amount is deposited
+					<br>A is the amount of money accumulated after n years, including interest
+					<br>A = P(1 + r)<sup>n</sup>
+					<br><br>Output in table format the year followed by the total amount calculated for each of the interest rates of 5% - 10%.</p>
+				</td>
+			</tr>
+		</table>
+		<div id="result"><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.05);</script>
+			</table><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.06);</script>
+			</table><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.07);</script>
+			</table><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.08);</script>
+			</table><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.09);</script>
+			</table><br>
+			<table class="tbcenter tbcontent">
+				<tr>
+					<td>Year</td>
+					<td>Amount of Deposit</td>
+					<td>Interest Rate(%)</td>
+				</tr>
+				<script>amount(1000,0.10);</script>
+			</table><br>
+		</div>
+	</div>
+	<div id="footer">
+		<p><a href="http://validator.w3.org/check?uri=http://hills.ccsf.edu/~pvephula/hw04/part3.html"><img src="../images/html5.png" height="25" alt="HTML5"></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" height="25" alt="Valid CSS!"></a></p>
+	</div>
+</div>
+</body>
+</html>
