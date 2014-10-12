@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $(function() {
+        $('#drag').draggable();
+    });
+
     $('#three').append('The product and sum of every third integer from 5 to 20');
     $('#prod3').text("The product is: " + prod3());
     $('#sum3').text("The sum is: " + sum3());
