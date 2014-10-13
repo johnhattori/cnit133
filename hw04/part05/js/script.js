@@ -5,10 +5,10 @@ $(document).ready(function() {
     $('#submit').click(function(){
         if($.isNumeric($("#input").val())){
             $('#errmsg').text('');
-            listIt();
+            showList();
         }
         else{
-            $('#errmsg').html("Please enter a 1 for an unordered list, 2 for an ordered number list or 3 for ordered letter list")
+            $('#errmsg').html("<br>Please enter a 1 for an unordered list, 2 for an ordered number list or 3 for ordered letter list")
         }
      });
  
@@ -39,7 +39,7 @@ function choice(list){
     }
     return list;
 }
-function listIt(){
+function showList(){
     var value;
     value = parseInt(document.getElementById("input").value);
     document.getElementById("list").innerHTML = choice(value);
