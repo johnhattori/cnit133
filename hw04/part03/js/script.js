@@ -1,27 +1,18 @@
-$(document).ready(function(){
-    
-    $('#change_color').click(function() {
-        $('#sum').addClass('invert');
-        return false;
-    });
 
-    $('#submit').click(function (){
-        result = ''
-        balance = parseFloat($('#balance').val()); 
-        charge = parseFloat($('#charge').val()); 
-        applied = parseFloat($('#applied').val()); 
-        limit  = parseFloat($('#limit').val()); 
 
-        new_balance = balance + charge - applied;
-        result += 'Your new balance is $' + new_balance;
-        new_limit = limit - new_balance;
-        if(new_limit < new_balance) {
-            result += "\nCredit limit exceeded by $" + (new_balance - limit);
-        }else {
-            result += "\nCredit available $" + (limit - new_balance);    
-        }
+for(var i = 5; i <= 10; i++){
+    document.write("<table class='table table-striped'><tr>" +
+            "<th>Year</th><th>Initial Deposit</th><th>rate(%)</th>");
+    accum(1000, i);
+    document.write("</table>");
+}
 
-        $('#sum').val(result)
-        return false;        
-   });
-});
+function accum(p,r){
+    var a = [], i;
+    for(i = 1; i <= 10; i++){
+        a[i] = (p*Math.pow(1+(r*.01),i)).toFixed(2);
+        document.write("<tr><td>"+i+"</td><td>"+a[i]+"</td><td>"+r+"</td></tr>");
+    }
+}
+
+

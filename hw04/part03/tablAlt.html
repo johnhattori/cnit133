@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<title>document.write altenating table rows</title>
+
+<style type="text/css">
+
+     body,td {
+        font-size: 10pt;
+      }
+      table {
+        background-color: black;
+        border: 1px black solid;
+        border-collapse: collapse;
+      }
+      th {
+        border: 1px outset silver;
+        background-color: maroon;
+        color: white;
+      }
+      tr {
+        background-color: yellow;
+        margin: 1px;
+      }
+      tr.striped {
+        background-color: coral;
+      }
+      td {
+        padding: 5px 10px;
+      }
+</style>
+   
+</head>
+<body bgcolor="#f5f5dc">
+
+<div align="center">
+
+<h3>Table Display - Square and Cube</h3>
+ 
+<script type="text/javascript">
+/* <![CDATA[ */
+
+
+         // write header
+
+         document.write( 
+            "<table border = '1'><tr> " +
+            "<th>Number</th><th>Square</th><th>Cube</th></tr>" );
+
+         
+for(var i = 1; i <= 10; i++)
+{
+         document.write(
+            "<tr align=\"right\"><td>" + i +  "</td>"  + "<td>" + i*i + "<td>" + i*i*i 
++  "</td></tr>" );
+
+  }       
+
+
+// close table tag
+
+         document.write( "</table><br /><br />" );
+
+
+
+
+
+         document.write( 
+            "<table border = '1'><tr> " +
+            "<th>Number</th><th>Square</th><th>Cube</th></tr>" );
+
+
+for(var i = 11; i <= 20; i++)
+{
+         document.write(
+            "<tr align=\"right\"><td>" + i +  "</td>"  + "<td>" + i*i + "<td>" + i*i*i 
++  "</td></tr>" );
+
+  }       
+
+
+// close table tag
+
+         document.write( "</table>" )
+
+         document.close();
+
+/*]]>*/    
+</script>
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+      $(function() {
+        $("table tr:nth-child(even)").addClass("striped");
+      });
+    </script>
+
+ <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10" border="0"
+        alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+  </p>
+
+</div>
+
+</body>
+</html>
