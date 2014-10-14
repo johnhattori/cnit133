@@ -1,10 +1,10 @@
 //while loop to create lyrics
-var i = 1;
+var i = 1, dayGift="";
     document.write("<h4 style='text-align:center'>The Twelve Days of Christmas</h4>");
 while(i <= 12){
     document.write("<p style='text-align:center'>On the " + days(i) + " day of Christmas<br>"); 
-    document.write("My true love gave to me:<br/>");
-dayGift = gift(i);
+document.write("My true love gave to me:<br/>");
+dayGift = gift(i) + dayGift;
     document.write(dayGift);
     document.write("" + and(i) + " partridge in a pear tree.</p><br/>");
     i++;
