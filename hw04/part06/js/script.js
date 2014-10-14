@@ -3,7 +3,7 @@ var i = 1;
     document.write("<h4 style='text-align:center'>The Twelve Days of Christmas</h4>");
 while(i <= 12){
     document.write("<p style='text-align:center'>On the " + days(i) + " day of Christmas<br>"); 
-document.write("My true love gave to me:<br/>");
+    document.write("My true love gave to me:<br/>");
 dayGift = gift(i);
     document.write(dayGift);
     document.write("" + and(i) + " partridge in a pear tree.</p><br/>");
@@ -46,7 +46,8 @@ function days(expr){
         case 11: 
             day = "eleventh"; 
             break;
-        case 12: day = "twelfth";  break;
+        case 12: day = "twelfth";  
+            break;
     }
     return day;
 }
