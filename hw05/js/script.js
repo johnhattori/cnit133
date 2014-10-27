@@ -28,12 +28,13 @@ function validate(form){
             radio = form.rad[i].value;
     }
     //value for checkbox
-    var checkedValue = null; 
-    var inputElements = document.getElementsByClassName('cbox');
-    for(var i=0; inputElements[i]; ++i){
+    var checkedValue = [];
+    console.log(checkedValue); 
+    var inputElements = document.getElementsByName('cbox');
+    console.log(inputElements.length); 
+    for(var i = 0; i < inputElements.length; ++i){
       if(inputElements[i].checked){
-           checkedValue = inputElements[i].value;
-           break;
+           checkedValue.push(inputElements[i].value);
         }
     }
     //value for options
@@ -57,13 +58,15 @@ function validate(form){
             break;
         }
     }
-    if(checkedValue == null)
+
+    if(checkedValue.length == 0)
         msg = msg + "No checkbox chosen<br>";
     else{
-        for(i=0;i<checkedValue.length;i++){
-            msg = msg + "Checkbox " + checkedValue[i] + " checked<br>";
+        for(var i=0; i<checkedValue.length; i++){
+        msg = msg + "You chose checkbox " + checkedValue[i] + "<br>";
         }
-    } 
+    }
+ 
     if(option == "o0")
         msg = msg + "No option selected";
     else{
