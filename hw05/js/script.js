@@ -92,12 +92,20 @@ function validate1(form) {
     var option = e.options[e.selectedIndex].value;
     var msg = ""
     if(option == "select") {
-        msg = msg + "No option selected";
-    document.getElementById('showmsg').innerHTML = msg;
+        msg = "No option selected";
+        document.getElementById('showmsg').innerHTML = msg;
     }    
     else{ 
         msg = "";
         document.getElementById('showmsg').innerHTML = msg;
         window.location.replace(option);
     }
-}   
+}
+
+var validate2 = function() {
+  var msg = "";
+  if(document.form2.drop.value == "select")
+      msg = "No option selected";
+      document.getElementById('showmsg').innerHTML = msg;    
+};
+   
