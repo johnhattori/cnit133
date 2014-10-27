@@ -104,7 +104,7 @@ function validate1(form) {
 
 var validate2 = function() {
   var msg = "";
-  if(document.form2.drop.value == "select")
+  if(document.form2.drop.value == "#")
       msg = "No option selected";
       document.getElementById('showmsg').innerHTML = msg;    
 };
