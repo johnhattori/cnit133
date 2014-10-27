@@ -31,35 +31,41 @@
         <div>
             <table class="table">
                 <tr>
-                    <td><a href="#">part A</a> | <a href="indexb.html">part B</a></td>
+                    <td><a href="index.html">part A</a> | <a href="#">part B</a></td>
                 </tr>
             </table>
-            <form name="index1">
             <table class="table">
                 <tr>
-                    <th>part A</th>
+                    <th>part B</th>
+                </tr>
+   
+                <tr>
+                    <td>
+                        <form name="form">
+                        <select id="dynamic_select" onChange = "validate1(this.form)">
+                            <option value="#">select</option>
+                            <option value="http://sequelizejs.com/">Sequelize.js</option>
+                            <option value="http://gulpjs.com/">Gulp.jshttp://expressjs.com/</option>
+                            <option value="http://expressjs.com/">Express.js</option>
+                        </select>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" id="text"><br>
-                        <input type="radio" name="rad" value="r1">button 1<br>
-                        <input type="radio" name="rad" value="r2">button 2<br>
-                        <input type="radio" name="rad" value="r3">button 3<br>
-                        <input type="checkbox" name="cbox" value="c1">checkbox 1<br>
-                        <input type="checkbox" name="cbox" value="c2">checkbox 2<br>
-                        <input type="checkbox" name="cbox" value="c3">checkbox 3<br>
-                        <select name="option" id="opt">
-                            <option value="o0">select</option>
-                            <option value="o1">option 1</option>
-                            <option value="o2">option 2</option>
-                            <option value="o3">option 3</option>
+                        <form name="index2">
+                        <select id="options">
+                            <option>select</option>
+                            <option value="http://sequelizejs.com/">Sequelize.js</option>
+                            <option value="http://gulpjs.com/">Gulp.jshttp://expressjs.com/</option>
+                            <option value="http://expressjs.com/">Express.js</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button type="button" class="btn btn-default" id="submit">Submit</button>
-                        <button type="button" class="btn btn-default" id="reset">Reset</button>
+                        <input type="button" onclick="validate1(this.form)" value="Submit">
+                        </form>
                     </td>
                 </tr>
                 <tr>
@@ -68,9 +74,10 @@
                     </td>
                 </tr>
             </table>
-            </form>
-
-
+        <br>
+        </div>
+    </div>
+        
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
