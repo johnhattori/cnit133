@@ -59,7 +59,7 @@
                 <tr>
                     <td>
                         <button type="button" class="btn btn-default" id="submit">Submit</button>
-                        <button type="reset" value="reset" class="btn btn-default" id="reset">Reset</button>
+                        <button type="button" value="reset" class="btn btn-default" id="reset" onclick="this.form.reset();">Reset</button>
                     </td>
                 </tr>
                 <tr>

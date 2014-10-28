@@ -29,9 +29,7 @@ function validate(form){
     }
     //value for checkbox
     var checkedValue = [];
-    console.log(checkedValue); 
     var inputElements = document.getElementsByName('cbox');
-    console.log(inputElements.length); 
     for(var i = 0; i < inputElements.length; ++i){
       if(inputElements[i].checked){
            checkedValue.push(inputElements[i].value);
