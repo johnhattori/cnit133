@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var counters = [0, 0, 0, 0, 0, 0, 0, 0 ,0];
+    $( '#sales' ).numeric();
     $( '#results' ).click(function() {
         var emp = $( '#empName' ).val();
         var total = sales();
@@ -29,10 +30,7 @@ function display(counters) {
 }
 function sales() {
     var usr_input = parseInt($( '#sales' ).val());
-    if(isNaN(usr_input))
-        document.getElementById( 'errMsg' ).innerHTML = "Please enter a number";
-    else
-        return usr_input * .09 + 200;
+    return usr_input * .09 + 200;
 }
 
 function count(total, counters) {
