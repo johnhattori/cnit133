@@ -31,15 +31,15 @@
             <label>Amount of employees who earned: </label>
             <thead>
                 <tr>
-                    <th><$300</th>
-                    <th><$400</th>
-                    <th><$500</th>
-                    <th><$600</th>
-                    <th><$700</th>
-                    <th><$800</th>
-                    <th><$900</th>
-                    <th><$1000</th>
-                    <th>$1000+</th>
+                    <th>less than $300</th>
+                    <th>less than $400</th>
+                    <th>less than $500</th>
+                    <th>less than $600</th>
+                    <th>less than $700</th>
+                    <th>less than $800</th>
+                    <th>less than $900</th>
+                    <th>less than $1000</th>
+                    <th>more than $1000</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,12 +66,13 @@
                 <button type="button" class="btn btn-default" id="results">results</button> 
                 <button type="reset" class="btn btn-default" id="reset">Reset</button> 
             </div>
+            <div style="color:red" id="errMsg"></div>
         </form>
         
         <table id="salesTable" class="table">
             <tr>
                 <th>Employee Name</th>
-                <th>Gross Pay</th>
+                <th>Weekly Pay ($200, plus 9% of gross pay)</th>
             </tr>
         </table>
 

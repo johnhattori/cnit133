@@ -3,7 +3,8 @@ $(document).ready(function() {
     $( '#results' ).click(function() {
         var emp = $( '#empName' ).val();
         var total = sales();
-        var newRow = '<tr><td>' + emp + '</td><td>' + total + '</td></tr>';
+        var print_total = '$ ' + total;
+        var newRow = '<tr><td>' + emp + '</td><td>' + print_total + '</td></tr>';
         $('#salesTable tr:last').after(newRow);
         count(total, counters);
         display(counters);
@@ -12,6 +13,10 @@ $(document).ready(function() {
         $( '#salesTable' ).find("tr:gt(0)").remove();
         counters = [0, 0, 0, 0, 0, 0, 0, 0 ,0];
         display(counters);
+        $( '#errMsg' ).empty();
+    });
+    $( 'input' ).on('click focusin', function() {
+        this.value = '';
     });
 
 });
@@ -24,7 +29,10 @@ function display(counters) {
 }
 function sales() {
     var usr_input = parseInt($( '#sales' ).val());
-    return usr_input * .09 + 200;
+    if(isNaN(usr_input))
+        document.getElementById( 'errMsg' ).innerHTML = "Please enter a number";
+    else
+        return usr_input * .09 + 200;
 }
 
 function count(total, counters) {
