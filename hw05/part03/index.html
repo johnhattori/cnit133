@@ -26,6 +26,55 @@
                 </div>
             </div>    
         </div>
+
+        <table id="countTable" class="table">
+            <label>Amount of employees who earned: </label>
+            <thead>
+                <tr>
+                    <th><$300</th>
+                    <th><$400</th>
+                    <th><$500</th>
+                    <th><$600</th>
+                    <th><$700</th>
+                    <th><$800</th>
+                    <th><$900</th>
+                    <th><$1000</th>
+                    <th>$1000+</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form role="form">
+            <div class="form-group">
+                <label for="empName">Enter employee name: </label>
+                <input type="text" class="form-control" id="empName">
+                <label for="sales">Enter sales for employee: </label>
+                <input type="number" class="form-control" id="sales">
+                <button type="button" class="btn btn-default" id="results">results</button> 
+                <button type="reset" class="btn btn-default" id="reset">Reset</button> 
+            </div>
+        </form>
+        
+        <table id="salesTable" class="table">
+            <tr>
+                <th>Employee Name</th>
+                <th>Gross Pay</th>
+            </tr>
+        </table>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/script.js"></script> 

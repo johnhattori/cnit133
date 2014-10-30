@@ -29,7 +29,41 @@
                 </div>    
             </div>    
         </div>
-   
+      
+        <div class="container"> 
+        <form role="form">
+        <table class="table table-condensed">
+            <tr>
+                <td><button type="button" class="btn btn-info" id="info">Click to show/hide instructions</button></td>
+            </tr>
+            <tr>    
+                <td><div class="col-md-6" id="showInfo">Enter a state abbreviation or name (lower or upper case is ok)</div></td>
+            </tr>    
+        </table>
+        <label>Enter state name or state abbreviation here: </label>
+        <input type="text" class="form-control" id="input_st">
+        <button type="button" class="btn btn-default" id="info_btn">State Info</button>
+        <button type="reset" class="btn btn-default" id="reset">Reset</button>
+        <div id="errmsg"></div>
+            <div class="form-group">
+                <label for="">State Abbreviation</label>
+                <input type="text" class="form-control" id="st_abbr" disabled>
+            </div>
+            <div class="form-group">
+                <label for="">State Name</label>
+                <input type="text" class="form-control" id="st_name" disabled>
+            </div>
+            <div class="form-group">
+                <label for="">Capital</label>
+                <input type="text" class="form-control" id="capital" disabled>
+            </div>
+            <div class="form-group">
+                <label for="">Population</label>
+                <input type="text" class="form-control" id="pop" disabled>
+            </div>
+
+        </div>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
         <script src="js/bootstrap.js"></script>
