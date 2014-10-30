@@ -27,8 +27,16 @@
                 </div>
             </div>    
         </div>
-        
-        `
+        <form role="form">
+            <div class="form-group">
+                <label>Enter ten numbers between 10 and 100</label>
+                <input type="text" class="form-control" id="num" 
+            </div> 
+            <button type="button" class="btn btn-default" onclick = "inputNum()">Submit</button>
+            <button type="reset" class="btn btn-default" onclick = "clearErr()">reset</button>
+            <div style="color:red" id="errMsg"></div>
+            <div id="display"></div>
+        </form>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/script.js"></script>
