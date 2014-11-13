@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App">
     <head>
         <meta charset="utf-8">
         <title>Homework 06 - part2</title>
@@ -8,6 +8,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
         <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
     </head>
     <body>
 
@@ -30,8 +31,15 @@
             </div>    
         </div>
       
-        <div class="container"> 
-
+        <div class="container" ng-controller="SearchController"> 
+            <form role="form" name="charSearch" nosubmit="">
+                <h4>Enter text to be reviewed</h4>
+                    <textarea name="inputText" rows="10" cols="50" ng-model="text" spellcheck="true"></textarea>
+                <h4>Enter characters to be counted</h4>
+                    <input class="form-control" ng-model="charInput" type="text">
+                    <button type="reset" class="btn btn-danger" value="reset">reset</button>
+                    <h4 ng-model="result">Instance(s) of {{charInput}} in provided text is: {{countChar()}}</h4>
+            </form>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
