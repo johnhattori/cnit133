@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="todoApp">
+<html lang="en" ng-app="calcApp">
     <head>
         <title>CNIT 133 - Homework 06 - Objects</title>
         <meta name"vieport" content="width=device-width, intitial-scale=1.0, user-scalable=no">
@@ -30,20 +30,17 @@
             </div>   
         </div>
         
-        <h2>Todo</h2>
-        <div ng-controller="TodoController">
-          <span>{{remaining()}} of {{todos.length}} remaining</span>
-          [ <a href="" ng-click="archive()">archive</a> ]
-          <ul class="unstyled">
-            <li ng-repeat="todo in todos">
-              <input type="checkbox" ng-model="todo.done">
-              <span class="done-{{todo.done}}">{{todo.text}}</span>
-            </li>
-          </ul>
-          <form ng-submit="addTodo()">
-            <input type="text" ng-model="todoText"  size="30"
-                   placeholder="add new todo here">
-            <input class="btn-primary" type="submit" value="add">
+        <h4>Input a number with at least four decimals</h4>
+        <div ng-controller="CalcController">
+          <form ng-submit="Calculate()">
+            <input type="number" ng-model="inputNum"  size="30"
+                   placeholder="enter number">
+            <input class="btn-primary" type="reset" ng-click="Clear()" value="reset">
+            <div>You entered: {{inputNum}}</div>
+            <div>Your number squared: <span ng-bind="squareNum()"></span></div>
+            <div>Your number to the nearest tenths position: <span ng-bind="tenthNum()"></span></div>
+            <div>Your number to the nearest one hundereds position: <span ng-bind="hundredNum()"></span></div>
+            <div>Your number to the nearest one thousands position: <span ng-bind="thousandNum()"></span></div>
           </form>
         </div>
 
