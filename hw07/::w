@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CNIT 133 - Homework 05 - Arrays</title>
+        <meta name"vieport" content="width=device-width, intitial-scale=1.0, user-scalable=no">
+        <link href = "css/bootstrap.min.css" rel = "stylesheet">
+        <link href = "css/style.css" rel = "stylesheet">
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+    <body>
+        <div class = "navbar navbar-default navbar-static-top">
+            <div class = "container">
+                <a href = "#"  class = "navbar-brand">CNIT133 Homework 05 - Arrays</a>
+                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                </button>
+                <div class = "collapse navbar-collapse navHeaderCollapse">
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li class = "active"><a href = "#">Part1</a></li>
+                        <li><a href = "part02/index.html">Part2</a></li>
+                        <li><a href = "part03/index.html">Part3</a></li>
+                        <li><a href = "part04/index.html">Part4</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </div>
+        
+        <div>
+            <table class="table">
+                <tr>
+                    <td><a href="#">part A</a> | <a href="indexb.html">part B</a></td>
+                </tr>
+            </table>
+            <form name="index1">
+            <table class="table">
+                <tr>
+                    <th>part A</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="text"><br>
+                        <input type="radio" name="rad" value="r1">button 1<br>
+                        <input type="radio" name="rad" value="r2">button 2<br>
+                        <input type="radio" name="rad" value="r3">button 3<br>
+                        <input type="checkbox" name="cbox" value="1">checkbox 1<br>
+                        <input type="checkbox" name="cbox" value="2">checkbox 2<br>
+                        <input type="checkbox" name="cbox" value="3">checkbox 3<br>
+                        <select name="option" id="opt">
+                            <option value="o0">select</option>
+                            <option value="o1">option 1</option>
+                            <option value="o2">option 2</option>
+                            <option value="o3">option 3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-default" id="submit">Submit</button>
+                        <button type="button" value="reset" class="btn btn-default" id="reset" onclick="this.form.reset();">Reset</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id = "showmsg"></div>
+                    </td>
+                </tr>
+            </table>
+            </form>
+
+
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script src = "js/bootstrap.js"></script>
+        <script src = "js/script.js"></script> 
+    </body>
+</html>
