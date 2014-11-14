@@ -35,8 +35,8 @@
             <form role="form" name="charSearch" nosubmit="">
                 <h4>Enter text to be reviewed</h4>
                     <textarea name="inputText" rows="10" cols="50" ng-model="text" spellcheck="true"></textarea>
-                <h4>Enter characters to be counted</h4>
-                    <input class="form-control" ng-model="charInput" type="text">
+                <h4>Enter a single character to be counted</h4>
+                    <input class="form-control" ng-model="charInput" ng-maxlength="1" type="text">
                     <button type="reset" class="btn btn-danger" value="reset">reset</button>
                     <h4 ng-model="result">Instance(s) of {{charInput}} in provided text is: {{countChar()}}</h4>
             </form>

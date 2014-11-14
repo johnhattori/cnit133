@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <title>CNIT133 Homework 05 - part 3</title>
         <meta name"vieport" content="width=device-width, intitial-scale=1.0">
         <link href = "css/bootstrap.min.css" rel = "stylesheet">
         <link href = "css/style.css" rel = "stylesheet">
+        <link rel="stylesheet" href="bower_components/intl-tel-input/build/css/intlTelInput.css">
         <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
     </head>
     <body>        
         <div class = "navbar navbar-default navbar-static-top">
@@ -26,10 +28,25 @@
                 </div>
             </div>    
         </div>
-
+        <div>
+            <h4>Current date and time: {{AssignedDate.now() | date:'yyyy-MM-dd HH:mm:ss'}}</h4>
+            <hr />
+            <p>Date format full: {{AssignedDate.now() | date: 'fullDate'}}</p>
+            <p>Date format short: {{AssignedDate.now() | date:'short'}}</p>
+            <p>Date UTC : {{AssignedDate.now() | date:'yyyy-MM-dd HH:mm:ss': 'UTC'}}</p>
+            <p>Date offset: {{AssignedDate.now() | date: 'Z'}}</p>
+        </div>
+        <input type="tel" id="mobile-number"> 
+        <button class="btn btn-default" id="format">format</button>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/script.js"></script> 
+        <script src="bower_components/intl-tel-input/build/js/intlTelInput.min.js"></script>
+        <script>  
+          $("#mobile-number").intlTelInput({
+            utilsScript: "bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"
+          });
+        </script>
     </body>
 </html>
