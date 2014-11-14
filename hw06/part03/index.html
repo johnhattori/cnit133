@@ -36,9 +36,13 @@
             <p>Date UTC : {{AssignedDate.now() | date:'yyyy-MM-dd HH:mm:ss': 'UTC'}}</p>
             <p>Date offset: {{AssignedDate.now() | date: 'Z'}}</p>
         </div>
+        <h4>Enter a phone number: </h4>
         <input type="tel" id="mobile-number"> 
-        <button class="btn btn-default" id="format">format</button>
-
+        <button class="btn btn-default" id="format">format</button></br>
+        <span id="area"></span></br>
+        <span id="prefix"></span></br>
+        <span id="suffix"></span>
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/script.js"></script> 

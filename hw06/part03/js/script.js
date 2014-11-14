@@ -8,10 +8,17 @@ app.run(function($rootScope,$interval){
     },1000)
 })
 $( document ).ready(function() {
-    var num = $( '#mobile-number' ).intlTelInput("getCleanNumber");
     $( '#format' ).click(function() {
-        console.log($( '#mobile-number' ).intlTelInput("getCleanNumber"));
-            
+        $( '#area' ).empty();    
+        $( '#prefix' ).empty();    
+        $( '#suffix' ).empty();    
+        var num = $( '#mobile-number' ).intlTelInput("getCleanNumber");
+        var area = num.slice(2,5);
+        var prefix = num.slice(4,7);
+        var suffix = num.slice(7,14);
+        $( '#area' ).append("Your area code is: " + area);    
+        $( '#prefix' ).append("Your prefix is: " + prefix);    
+        $( '#suffix' ).append("Your line number is: " + suffix);    
     });
 
 });
