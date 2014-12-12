@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Homework 06 - part2</title>
+        <title>Homework 08 - part2</title>
         <meta name"vieport" content="width=device-width, intitial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 
         <div class = "navbar navbar-default navbar-static-top">
             <div class = "container">
-                <a href = "#"  class = "navbar-brand">CNIT133 Homework 06 - Objects</a>
+                <a href = "#"  class = "navbar-brand">CNIT133 Homework 08 - Ajax Applications</a>
                 <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                     <span class = "icon-bar"></span>
                     <span class = "icon-bar"></span>
@@ -29,10 +29,38 @@
                 </div>    
             </div>    
         </div>
+        <form name="myForm" id="myForm" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" onchange="ajaxFunction()">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="time" class="col-sm-2 control-label">Time:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="time" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="date" class="col-sm-2 control-label">Date(day, date format):</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="day" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="time" class="col-sm-2 control-label">Date(mm/dd/yy format)</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="date" readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="reset" class="btn btn-default">reset</button>
+            </div>
+          </div>  
+        </form>
       
-        <div class="container"> 
-
-        </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
