@@ -27,11 +27,23 @@
                 </div>
             </div>    
         </div>
-
-
+        <form role="form" id="passwd-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">User Name</label>
+            <input type="text" class="form-control" id="user" data-toggle="tooltip" title="Hint - Name of the sled in the movie Citizen Kane" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="passwd" data-toggle="tooltip" title="Hint - An Indonesian dragon" placeholder="Password">
+          </div>
+          <button type="button" class="btn btn-default" id="submit">Submit</button>
+          <button type="reset" class="btn btn-default" id="reset">Reset</button>
+          <button type="button" class="btn btn-danger" id="delete" onclick="deleteCookie()">Delete Cookies</button>  
+        </form>
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
         <script src = "js/bootstrap.js"></script>
         <script src = "js/script.js"></script>
     </body>
